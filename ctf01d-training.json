@@ -1,0 +1,42 @@
+{
+  "service_name": "2018-service-lie-to-me",
+  "display_name": "Lie To Me",
+  "ctf_event": "Sibir CTF 2018",
+  "year": 2018,
+  "description": "Сервис проверки решений: компилирует и запускает присланный код против тестов.",
+  "author": null,
+  "service_port": 8080,
+  "languages": [
+    "Perl"
+  ],
+  "tech_stack": [
+    "Perl",
+    "PostgreSQL"
+  ],
+  "dependencies": {
+    "runtime": [],
+    "development": [],
+    "system": [
+      "postgresql",
+      "libpq-dev",
+      "build-essential"
+    ]
+  },
+  "vulnerabilities": [
+    {
+      "type": "SQL Injection",
+      "description": "SQL формируется строковой подстановкой во многих запросах.",
+      "severity": "High"
+    },
+    {
+      "type": "Command Injection",
+      "description": "Параметр login попадает в backticks gcc/exec, возможен запуск команд.",
+      "severity": "High"
+    }
+  ],
+  "metadata": {
+    "difficulty": null,
+    "category": null,
+    "tags": []
+  }
+}
